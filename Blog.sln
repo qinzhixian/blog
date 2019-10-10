@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Blog", "Web.Blog\Web.Blog.csproj", "{493FDC78-4D6D-4C05-89F0-C1F56D96F6EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09641E86-BD1F-4D7A-85D2-6A1E9B5F5B3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09641E86-BD1F-4D7A-85D2-6A1E9B5F5B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09641E86-BD1F-4D7A-85D2-6A1E9B5F5B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09641E86-BD1F-4D7A-85D2-6A1E9B5F5B3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AB160C2-F71F-409C-934C-8E277B265423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AB160C2-F71F-409C-934C-8E277B265423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AB160C2-F71F-409C-934C-8E277B265423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AB160C2-F71F-409C-934C-8E277B265423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{493FDC78-4D6D-4C05-89F0-C1F56D96F6EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{493FDC78-4D6D-4C05-89F0-C1F56D96F6EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{493FDC78-4D6D-4C05-89F0-C1F56D96F6EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{493FDC78-4D6D-4C05-89F0-C1F56D96F6EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{09641E86-BD1F-4D7A-85D2-6A1E9B5F5B3F} = {A2D5B1F1-4D85-4D55-B6BA-8D29C0EF76AF}
+		{5AB160C2-F71F-409C-934C-8E277B265423} = {2B648C72-21E5-44D7-9C65-1E189D84932F}
+		{493FDC78-4D6D-4C05-89F0-C1F56D96F6EE} = {A2D5B1F1-4D85-4D55-B6BA-8D29C0EF76AF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A15B2DE4-2554-47CF-99A3-520E4CE5C083}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,54 @@
+﻿/*初始化*/
+html,body{min-width:1356px;border:none;margin:0;color:white;font-size:14px;background-size:cover;background-repeat:no-repeat;}
+span{color:white;}
+
+/*选中项*/
+.selected_this>span{color:orange;}
+
+/*整体内容*/
+.body{width:100%;/*height:800px;*/margin-top:30px;}
+
+/*左侧*/
+.body>.left{float:left;width:20%;min-width:300px;height:100%;text-align:center;}
+
+/*个人信息*/
+.body>.left>.info{width:70%;text-align:center;margin:0 auto;}
+/*头像*/
+.body>.left>.info>.head_img{width:100px;height:100px;border-radius:50%;margin:0 auto;}
+/*名字*/
+.body>.left>.info>.name_box{margin:10px 0 10px 0;color:chocolate;}
+/*分割线*/
+.body>.left>.info>.split_line{margin:20px 0 20px 0;border-bottom:1px dashed black;}
+
+/*站点介绍*/
+.body>.left>.info>.site_remake{height:50px;}
+/*子项*/
+.body>.left>.info>.site_remake>.item{float:left;width:33%;display:block;}
+
+.body>.left>.info>.site_remake>.item>span{float:left;width:100%;}
+
+/*左侧菜单*/
+.body>.left>.menu{width:60%;text-align:center;margin:0 auto;margin-top:70px;}
+
+/*菜单子项*/
+.body>.left>.menu>.item{width:80px;height:40px;margin:0 auto;margin-top:50px;display:block;}
+.body>.left>.menu>.item>span{float:left;width:100%;margin-bottom:2px;}
+
+
+
+/*右侧*/
+.body>.right{float:right;width:72%;height:100%;margin-right:5%;}
+
+/*搜索框*/
+.body>.right>.search_box{height:32px;margin-top:10px;position:relative;}
+
+/*搜索输入框*/
+.body>.right>.search_box>input{float:right;width:250px;height:100%;padding-left:10px;padding-right:40px;background:none;border:1px solid orange;outline:none;color:orange}
+
+/*搜索图标*/
+.body>.right>.search_box>.search_icon{position:absolute;right:10px;margin-top:2px;}
+
+
+/*正文盒子*/
+.body>.right>.page_content{height:840px;margin-left:20px;margin-top:50px;overflow:hidden;overflow-y:auto;}
+.body>.right>.page_content>iframe{width:100%;height:calc(100% - 20px);border:none;}

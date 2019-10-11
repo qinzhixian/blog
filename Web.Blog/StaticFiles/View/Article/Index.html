@@ -82,8 +82,12 @@
     </div>
 </div>
 
-<script src="/Script/jq/jquery-3.4.1/jquery-3.4.1.min.js"></script>
 <script type="module">
-    import article from '/Script/Blog/Article/Index.js';
+    import common from '/Script/Common/Common.js'
+
+    common.use(['Jq', 'Article', 'Http'], (modules) => {
+        //modules.http.ajax('/dd/aa.html')
+    });
+
 </script>
 

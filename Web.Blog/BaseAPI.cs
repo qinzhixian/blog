@@ -99,6 +99,9 @@ namespace Web.Blog
         {
             var html = ViewHelper.GetView(controllerName, viewName);
 
+            HttpContext.Response.Headers.Add("Cache-Control", "max-age=315360000");
+            HttpContext.Response.Headers.Add("Expires", DateTime.MaxValue.ToString());
+
             return Content(html, HttpContentTypeConst.html);
         }
 

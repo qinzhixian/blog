@@ -45,6 +45,9 @@ namespace Web.Blog.MiddleWare
             context.Response.ContentType = contentType;
             try
             {
+                context.Response.Headers.Add("Cache-Control", "max-age=315360000");
+                context.Response.Headers.Add("Expires", DateTime.MaxValue.ToString());
+
                 await context.Response.SendFileAsync($"{StaticFilesHelper.StaticFilesRootPath}/{url}");
             }
             catch (Exception)

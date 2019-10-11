@@ -19,7 +19,7 @@ class ImageUrlModel {
 
         this.body_background_img_url = 'url(/Image/background/background.jpg)';
         this.head_img_url = 'url(/Image/head/head.jpg)';
-       
+
         this.selected_this_css = 'selected_this';
     }
 }
@@ -36,7 +36,7 @@ class Blog {
         if (!window.$) {
             return console.error('依赖项Jquery未正确加载！');
         }
-
+       
         this.elemModel = new ElemModel();
         this.imageModel = new ImageUrlModel();
         this.styleModel = new StyleModel();
@@ -48,7 +48,6 @@ Blog.prototype.Init = function () {
     let context = this;
 
     context.InitBackground = function () {
-        console.log(context.elemModel.bodyElem);
         context.elemModel.bodyElem.css('background-image', context.imageModel.body_background_img_url);
         context.elemModel.headElem.css('background-image', context.imageModel.head_img_url);
     }();
@@ -102,8 +101,6 @@ window.onresize = function (ev) {
     //console.log(ev);
 }
 
-const _blog = new Blog();
+let blog = new Blog();
 
-//window.blog = _blog;
-
-export default _blog;
+export { blog };

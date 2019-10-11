@@ -12,7 +12,7 @@
         <div class="left">
             <div class="info">
                 <div class="head_img"></div>
-                <div class="name_box">秦智先</div>
+                <div class="name_box">汪汪汪</div>
                 <div class="split_line"></div>
                 <div class="site_remake">
                     <a class="item" href="javascript:;">
@@ -67,14 +67,11 @@
 
 </html>
 
-<script src="/Script/jq/jquery-3.4.1/jquery-3.4.1.min.js"></script>
-
-<!--<script src="/bable-core/browser.min.js"></script>-->
-
 <script type="module">
+    import common from '/Script/Common/Common.js';
+    
+    common.use(['Jq', 'Error', 'Blog'], function (modules) {
+        modules.blog.Init();
+    });
 
-    import blog from '/Script/Blog/blog.js';
-    import common from '/Script/Common/common.js'
-  
-    blog.Init();
 </script>

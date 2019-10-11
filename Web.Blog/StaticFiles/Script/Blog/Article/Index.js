@@ -31,7 +31,7 @@ class Article {
     constructor() {
 
         if (!window.$) {
-            return console.error('依赖项Jquery未正确加载！');
+            throw new Error('依赖项Jquery未正确加载！');
         }
 
         this.ContentElemModel = new ContentElemModel();
@@ -50,7 +50,7 @@ class Article {
 }
 
 Article.prototype.Init = function () {
-
+   
     let blogData = this.GetBlog();
 
     this.BlogContent = blogData.content;
@@ -139,8 +139,6 @@ Article.prototype.AutoChangeContent = () => {
     }, 3000);
 }
 
-const _article = new Article();
+let article = new Article();
 
-//window.article = _article;
-
-export default _article;
+export default article;

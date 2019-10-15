@@ -80,11 +80,16 @@ namespace Web.Blog
         /// <returns></returns>
         protected ActionResult View()
         {
-            StackTrace trace = new StackTrace();
+            string path = HttpContext.Request.Path.Value;
+            string[] pathArray = (path == @"/" ? "/Home/Index" : path).Split("/", StringSplitOptions.RemoveEmptyEntries);
+            string controllerName = pathArray[0];
+            string viewName = pathArray[1];
 
-            string controllerName = trace.GetFrame(1).GetMethod().DeclaringType.Name;
+            //StackTrace trace = new StackTrace();
 
-            string viewName = trace.GetFrame(1).GetMethod().Name;
+            //string controllerName = trace.GetFrame(1).GetMethod().DeclaringType.Name;
+
+            //string viewName = trace.GetFrame(1).GetMethod().Name;
 
             return View(controllerName, viewName);
         }

@@ -15,37 +15,33 @@ class Common {
  * @param {String} moduleName 模块名
  * @param {Function} callback  回调函数
  */
-Common.prototype.use = async function (moduleName, callback) {
+Common.prototype.use = async function(moduleName, callback) {
 
     this.packages ? '' : await import(this.packagePath).then((module) => { this.packages = module.packages; }, this);
 
-    if (Array.isArray(moduleName)) {
-
-        let moduleArray = [];
-
-        let len = moduleName.length;
-
-        //同步加载所有模块
-        for (var i = 0; i < len; i++) {
-            moduleArray.push(await import(this.packages[moduleName.shift()]));
-        }
-
-        let modules = {};
-        if (typeof (callback) === 'function') {
-
-            //将所有模块组合到一个对象上
-            for (var item in moduleArray)
-                for (var module in moduleArray[item])
-                    modules[module] = moduleArray[item][module];
-
-            callback(modules);
-        }
-    }
-    else {
+    if (!Array.isArray(moduleName)) {
         return await import(this.packages[moduleName]).then((result) => { callback && typeof (callback) ? callback(result) : '' });
     }
 
+    let moduleArray = [];
 
+    let len = moduleName.length;
+
+    //同步加载所有模块
+    for (let i = 0; i < len; i++) {
+        moduleArray.push(await import(this.packages[moduleName.shift()]));
+    }
+
+    let modules = {};
+    if (typeof (callback) === 'function') {
+
+        //将所有模块组合到一个对象上
+        for (var item in moduleArray)
+            for (var module in moduleArray[item])
+                modules[module] = moduleArray[item][module];
+
+        callback(modules);
+    }
 };
 
 const common = new Common();

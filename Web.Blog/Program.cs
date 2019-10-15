@@ -23,7 +23,7 @@ namespace Web.Blog
         static IWebHost CreateWebHost(int port)
         {
             return new WebHostBuilder()
-            .UseUrls($"http://127.0.0.1:{port}")
+            .UseUrls($"http://qinzhixian.cn;")
             .UseKestrel()
             .UseContentRoot(Directory.GetCurrentDirectory())
             .UseStartup<Startup>()

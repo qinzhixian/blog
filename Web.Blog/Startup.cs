@@ -10,6 +10,7 @@ using Web.Blog.MiddleWare.Image;
 using Microsoft.Extensions.Configuration.Json;
 using System.Threading.Tasks;
 using Web.Blog.MiddleWare.ALL;
+using Microsoft.AspNetCore.Diagnostics;
 
 namespace Web.Blog
 {
@@ -45,9 +46,14 @@ namespace Web.Blog
                 {
                     errorApp.Run(async context =>
                     {
+                        var ex = context.Features.Get<IExceptionHandlerFeature>();
+
+                        System.IO.File.AppendAllText("c:/web/error.txt", DateTime.Now + "\r\n" + ex.Error.ToString());
+
                         context.Response.Redirect("/Home/Error?code=500");
 
                         await context.Response.WriteAsync(new string(' ', 512)); // IE padding
+                        //await context.Response.WriteAsync(ex.Error.ToString()); // IE padding
                     });
                 });
             }

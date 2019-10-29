@@ -15,7 +15,7 @@ namespace Web.Blog
 
             host.RunAsync();
 
-            Console.WriteLine("host is started");
+            //Console.WriteLine("host is started");
 
             Console.ReadLine();
         }
@@ -23,7 +23,7 @@ namespace Web.Blog
         static IWebHost CreateWebHost(int port)
         {
             return new WebHostBuilder()
-            .UseUrls($"http://qinzhixian.cn;")
+            .UseUrls("http://*:8080")
             .UseKestrel()
             .UseContentRoot(Directory.GetCurrentDirectory())
             .UseStartup<Startup>()

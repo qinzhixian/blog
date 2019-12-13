@@ -23,7 +23,7 @@ namespace Web.Blog
         static IWebHost CreateWebHost(int port)
         {
             return new WebHostBuilder()
-            .UseUrls("http://*:8080")
+            .UseUrls("http://*:80")
             .UseKestrel()
             .UseContentRoot(Directory.GetCurrentDirectory())
             .UseStartup<Startup>()
